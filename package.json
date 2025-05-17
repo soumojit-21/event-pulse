@@ -1,0 +1,23 @@
+{
+  "name": "eventpulse",
+  "version": "1.0.0",
+  "description": "EventPulse - Real-time RSVP and feedback platform",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "server": "cd server && node index.js",
+    "client": "cd client && npm start",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm start",
+    "dev": "powershell -ExecutionPolicy Bypass -File run-dev.ps1",
+    "test": "powershell -ExecutionPolicy Bypass -Command \"cd client; npm test\"",
+    "test:client": "cd client && npm test",
+    "test:server": "cd server && npm test",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "build": "cd client && npm run build",
+    "build:client": "cd client && npm run build",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "author": "",
+  "license": "ISC"
+} 
